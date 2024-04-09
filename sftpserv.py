@@ -42,4 +42,4 @@ def start_server(server_port):
                 handle_client(secure_conn, client_address)
 
 if __name__ == "__main__":
-    start_server(3479)  # Change this to use a different port
+    start_server(1968)  # Change this to use a different port

@@ -28,4 +28,4 @@ def sftp_client(server_domain, server_port):
             secure_sock.sendall(command.encode())
 
 if __name__ == "__main__":
-    sftp_client("remote01.cs.binghamton.edu", 3479)  # Change domain and port as needed
+    sftp_client("remote05.cs.binghamton.edu", 1968)  
