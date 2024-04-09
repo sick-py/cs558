@@ -18,7 +18,7 @@ def handle_client(connection, client_address, server_socket):
                 if command == "get":
                     filename = args[0]
                     try:
-                        with open(f"server/{filename}", "r") as file:
+                        with open(f"../server/{filename}", "r") as file:
                             file_content = file.read()
                             connection.sendall(file_content.encode())
                             print(f"Transferred {len(file_content)} characters")
@@ -40,7 +40,7 @@ def start_server(server_port):
     global should_server_run
     
     context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
-    context.load_cert_chain(certfile="cert.pem", keyfile="key.pem")
+    context.load_cert_chain(certfile="../cert.pem", keyfile="../key.pem")
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.bind(('0.0.0.0', server_port))

@@ -4,7 +4,7 @@ from datetime import datetime
 import sys
 
 def sftp_client(server_domain, server_port):
-    context = ssl.create_default_context(cafile='cert.pem')
+    context = ssl.create_default_context(cafile='../cert.pem')
     #context = ssl.create_default_context()
 
     with socket.create_connection((server_domain, server_port)) as sock:
@@ -19,7 +19,7 @@ def sftp_client(server_domain, server_port):
                         print(data)
                     else:
                         filename = command.split()[1]
-                        with open(f"client/{filename}", "w") as file:
+                        with open(f"{filename}", "w") as file:
                             file.write(data)
                             print(f"Transferred {len(data)} characters")
                             print(f"File received at {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
