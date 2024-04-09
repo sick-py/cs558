@@ -1,4 +1,4 @@
-Name:Huaxin Tang
+er/Name:Huaxin Tang
 Email:htang28@binghamton.edu
 
 It's tested on remote machine, totally working.
@@ -15,8 +15,8 @@ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -node
 
 After genrating the certicifcate
 
-To run server:
+To run server in server/:
 python3 sftpserv.py 1967
 
-To run the client:
+To run the client in client/:
 python3 sftpcli.py remote06.cs.binghamton.edu 1967
