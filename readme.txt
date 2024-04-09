@@ -4,6 +4,8 @@ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -node
 -subj "/CN=hostname" \
 -addext "subjectAltName = DNS:hostname,IP:192.168.1.18"
 
+After genrating the certicifcate
+
 To run server:
 python3 sftpserv.py 1967
 
